@@ -114,6 +114,15 @@ a {
   color: var(--primary-dark);
 }
 
+.btn-submit {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.btn-submit:hover {
+  background: var(--primary-dark);
+}
+
 .btn-secondary {
   background: rgba(255, 255, 255, 0.18);
   color: #ffffff;
@@ -198,6 +207,34 @@ a {
 
 .contact-list li {
   list-style: none;
+}
+
+.contact-form {
+  display: grid;
+  gap: 0.55rem;
+  margin-top: 0.9rem;
+}
+
+.contact-form label {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.65rem 0.8rem;
+  font: inherit;
+  outline: none;
+  background: #ffffff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.25);
 }
 
 .site-footer {

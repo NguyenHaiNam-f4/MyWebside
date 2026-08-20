@@ -19,6 +19,13 @@ const currencyFormatter = new Intl.NumberFormat("vi-VN", {
   currency: "VND",
 });
 
+function createId() {
+  if (window.crypto && typeof window.crypto.randomUUID === "function") {
+    return window.crypto.randomUUID();
+  }
+  return `${Date.now()}_${Math.random().toString(16).slice(2)}`;
+}
+
 function loadTransactions() {
   const raw = localStorage.getItem(STORAGE_KEY);
   if (!raw) return [];
@@ -107,7 +114,7 @@ form.addEventListener("submit", (event) => {
   if (!Number.isFinite(amount) || amount <= 0) return;
 
   const newTransaction = {
-    id: crypto.randomUUID(),
+    id: createId(),
     description: descriptionInput.value.trim(),
     amount,
     type: typeInput.value,

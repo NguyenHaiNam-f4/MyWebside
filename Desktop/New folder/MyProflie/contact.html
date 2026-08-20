@@ -1,53 +1,91 @@
 <!doctype html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile | Liên hệ</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-row">
-      <a class="brand" href="index.html">Nguyen Van A</a>
-      <nav class="nav">
-        <a href="index.html">Trang chủ</a>
-        <a href="about.html">Giới thiệu</a>
-        <a href="skills.html">Kỹ năng</a>
-        <a href="projects.html">Dự án</a>
-        <a href="contact.html">Liên hệ</a>
-      </nav>
-    </div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile | Liên hệ</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-row">
+        <a class="brand" href="index.html">Nguyen Hai Nam</a>
+        <nav class="nav">
+          <a href="index.html">Trang chủ</a>
+          <a href="about.html">Giới thiệu</a>
+          <a href="skills.html">Kỹ năng</a>
+          <a href="projects.html">Dự án</a>
+          <a href="contact.html">Liên hệ</a>
+        </nav>
+      </div>
+    </header>
 
-  <main class="section">
-    <div class="container grid grid-2">
-      <section class="card">
-        <h1 class="section-title">Thông tin liên hệ</h1>
-        <ul class="contact-list">
-          <li><strong>Email:</strong> yourmail@gmail.com</li>
-          <li><strong>Số điện thoại:</strong> 09xx xxx xxx</li>
-          <li><strong>GitHub:</strong> github.com/yourname</li>
-          <li><strong>LinkedIn:</strong> linkedin.com/in/yourname</li>
-          <li><strong>Địa chỉ:</strong> Ho Chi Minh City, Vietnam</li>
-        </ul>
-      </section>
+    <main class="section">
+      <div class="container grid grid-2">
+        <section class="card">
+          <h1 class="section-title">Thông tin liên hệ</h1>
+          <ul class="contact-list">
+            <li><strong>Email:</strong> haidangphanthuy2020@gmail.com</li>
+            <li><strong>Số điện thoại:</strong> 034 953 8722</li>
+            <li><strong>GitHub:</strong> https://github.com/NguyenHaiNam-f4</li>
+            <li><strong>Địa chỉ:</strong> HaNoi city, Vietnam</li>
+          </ul>
+        </section>
 
-      <section class="card">
-        <h2>Lời nhắn</h2>
-        <p class="muted">
-          Bạn có thể thay phần này bằng form thực tế (Formspree hoặc Google Form) để nhận tin nhắn từ nhà tuyển dụng.
-        </p>
-        <div style="margin-top: 0.9rem;">
-          <a class="btn btn-primary" href="mailto:yourmail@gmail.com">Gửi email ngay</a>
-        </div>
-      </section>
-    </div>
-  </main>
+        <section class="card">
+          <h2>Lời nhắn</h2>
+          <p class="muted">
+            Điền form bên dưới để gửi tin nhắn trực tiếp cho mình qua Formspree.
+          </p>
+          <form
+            class="contact-form"
+            action="https://formspree.io/f/xkokywqr"
+            method="POST"
+          >
+            <label for="name">Họ và tên</label>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Nhập họ và tên của bạn"
+              required
+            />
 
-  <footer class="site-footer">
-    <div class="container">© <span data-year></span> Nguyen Van A. All rights reserved.</div>
-  </footer>
-  <script src="script.js"></script>
-</body>
+            <label for="email">Email</label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="example@gmail.com"
+              required
+            />
+
+            <label for="message">Nội dung</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Bạn muốn nhắn gì cho mình?"
+              required
+            ></textarea>
+
+            <input type="hidden" name="_subject" value="Tin nhan moi tu profile website" />
+            <button type="submit" class="btn btn-submit">Gui tin nhan</button>
+          </form>
+          <div style="margin-top: 0.9rem">
+            <a class="btn btn-primary" href="mailto:haidangphanthuy2020@gmail.com">
+              Gui email ngay
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        © <span data-year></span> Nguyen Hai Nam. All rights reserved.
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quan Ly Tai Chinh Ca Nhan</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>Quan ly tai chinh ca nhan</h1>
+        <p>Them giao dich thu chi, theo doi so du va du lieu tu dong luu tren trinh duyet.</p>
+      </header>
+
+      <section class="summary-grid">
+        <article class="card">
+          <h2>So du</h2>
+          <p id="balance" class="money neutral">0 đ</p>
+        </article>
+        <article class="card">
+          <h2>Tong thu</h2>
+          <p id="income" class="money income">0 đ</p>
+        </article>
+        <article class="card">
+          <h2>Tong chi</h2>
+          <p id="expense" class="money expense">0 đ</p>
+        </article>
+      </section>
+
+      <section class="card">
+        <h2>Them giao dich</h2>
+        <form id="transaction-form" class="form-grid">
+          <label>
+            Mo ta
+            <input id="description" name="description" type="text" placeholder="Vi du: Tien an, luong..." required />
+          </label>
+          <label>
+            So tien (VND)
+            <input id="amount" name="amount" type="number" min="1" step="1000" placeholder="100000" required />
+          </label>
+          <label>
+            Loai
+            <select id="type" name="type" required>
+              <option value="expense">Chi</option>
+              <option value="income">Thu</option>
+            </select>
+          </label>
+          <label>
+            Danh muc
+            <input id="category" name="category" type="text" placeholder="An uong, di chuyen..." required />
+          </label>
+          <label>
+            Ngay
+            <input id="date" name="date" type="date" required />
+          </label>
+          <button type="submit" class="btn-primary">Them giao dich</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <div class="section-head">
+          <h2>Lich su giao dich</h2>
+          <label>
+            Loc theo thang
+            <input id="month-filter" class="month-filter" type="month" />
+          </label>
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Ngay</th>
+                <th>Mo ta</th>
+                <th>Danh muc</th>
+                <th>Loai</th>
+                <th>So tien</th>
+                <th>Thao tac</th>
+              </tr>
+            </thead>
+            <tbody id="transaction-list"></tbody>
+          </table>
+        </div>
+        <p id="empty-state" class="empty-state">Chua co giao dich nao.</p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
